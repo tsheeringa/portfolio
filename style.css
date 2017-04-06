@@ -1,0 +1,63 @@
+   #tobias {
+       font-family: 'Roboto', sans-serif;
+       font-weight: 100px;
+       font-size: 24px;
+       line-height: 0;
+}
+
+   #graphic {
+       font-family: 'Roboto', sans-serif;
+       font-weight: 100px;
+       font-size: 24px;
+       line-height: 0;
+}
+
+   #both {
+       font-family: 'Roboto', sans-serif;
+       font-weight: 100px;
+       font-size: 20px;
+    
+}
+
+
+   body {
+       margin: 130px 15% 0;
+       line-height: 0.8;
+       font-size: 18px;
+       color: #444;
+       background: linear-gradient(20deg, #FFE9FE, #c5e8ff);
+       background: linear-gradient(20deg, #abceaa, #c5e8ff);
+<<<<<<< HEAD
+       background-size: 100% 245%;
+=======
+       background-size: 100% 230%;
+>>>>>>> gh-pages
+   }
+   
+   a:link {
+       text-decoration: none;
+       color: #444;
+   }
+   
+   a:visited {
+       text-decoration: none;
+       color: #444;
+   }
+   
+   a:hover {
+       text-decoration: none;
+       color: #FFE9FE;
+   }
+   
+   a:active {
+       text-decoration: none;
+       color: #444;
+   }
+   
+   #links {
+       font-family: 'Electrolize', sans-serif;
+   }
+   
+   html {
+       -webkit-font-smoothing: antialiased;
+   }
