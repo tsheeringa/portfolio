@@ -3,45 +3,87 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="wave.css"> 
+<!--    <link rel="stylesheet" type="text/css" href="wave.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="acc.css">
+<!--    <link rel="stylesheet" href="baguetteBox.css">-->
+      
+    <script src="accordion.js"></script>
+    <script src="baguetteBox.js"></script>
+      
     <link href="https://fonts.googleapis.com/css?family=Electrolize|Roboto:100,300" rel="stylesheet">
+    <link rel="icon" href="flavicon.png" type="image/png" sizes="16x16">  
+
 
     
   </head>
   
 <body> 
 
-<title class="txtwav flip"> 
+<title class=""> 
 
     Tobias Heeringa's mother ucking portfolio 
     
 </title>
     
-      
-<!--<div > 
-    <p id = "tobias">tobias heeringa </p>
-    <p id = "graphic">graphic and UX designer </p> 
-    <br>
-</div> -->
-
 <div id = both> 
     <p> tobias heeringa </p>
-    <p> graphic &#38; UX designer </p> 
+    <p> creative technologist  </p> 
+    <p> graphic &#38; UX design </p> 
+    <img src="sine.png" alt="line break" height="4" width="">
+    
+<div class = "container">
+    <div class = "one column">
+     <div id = "links">
+    <h4><a href=  "http://tobiasheeringa-bct.tumblr.com/" target="_blank">Blog</a></h4>
+    <h4><a href="https://www.behance.net/tsheeringaba5d" target="_blank">Behance</a></h4>
+    <h4><a href=  "https://www.instagram.com/visceralencounters" target="_blank">Instagram</a></h4>
+    <h4><a href=  "https://www.linkedin.com/in/tobias-heeringa-b2b9b1b4/" target="_blank">Linkedin</a></h4>
+    <img src="sine.png" alt="line break" height="4" width="">
+</div>      
+</div>
 </div> 
 
-<div id = "links">
-    <a href="https://www.behance.net/tsheeringaba5d" target="_blank"><h4>Behance</h4></a>
-    <a href=  "https://www.instagram.com/visceralencounters" target="_blank"><h4>Instagram</h4></a>
-    <a href=  "http://tobiasheeringa-bct.tumblr.com/" target="_blank"><h4>Tumblr</h4></a>
-    <a href=  "https://www.linkedin.com/in/tobias-heeringa-b2b9b1b4/" target="_blank"><h4>Linkedin</h4></a>
-    <br>
-    <a href="http://tobiasheeringa-bct.tumblr.com/tagged/globalchallenges" target="_blank">Global Challenges - Journal</a>
-</div>   
+<p>projects</p>
+
+ <ul class="acc container" id="acc">
+        <li>
+            <h3>Uproot: Sustaniable Urban Agriculture - 2017</h3>
+            <div class="acc-section row">
+                <div class="acc-content">
+                    <div class="five columns">
+                        <div class="gallery Uproot">
+                            <a href="assets/Uproot/big/1.png" data-at-900="assets/Uproot/small/1.png" data-at-1600="assets/Uproot/medium/1.png" data-at-1920="assets/Uproot/big/1.png">
+                                <img src="Uproot.png" width="320" >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="seven columns">
+                        <p>Uproot is an Auckland based urban agriculture startup. We grow leafy green vegetables using a relatively new technology named aeroponics, a method of growing plants out of soil. Our intention behind the business comes from the desire to disrupt New Zealand’s reliance on traditional methods of agriculture, methods we recognise as inefficient and destructive to our unique environment. Our philosophy is to reduce our environmental impact by bringing plant agriculture out of the country and into the city, while producing delicious, nutritious food locally.
+                        </p>
+                        <p>In collaboration with <a href="http://tarchutkin.com/" target="_blank">Matvey Tarchutkin</a> / <a href="http://juliandv.com/" target="_blank">Julian de Villiers</a> / Connor Curlewis / <a href="http://www.curtl-design.com/" target="_blank">Curtis Layton</a></p>
+                        <p>Follow us on our <a href="https://givealittle.co.nz/cause/uproot-urbanagriculture" target="_blank">crowdfunding campaign</a></p>
+                    </div>
+                </div>
+            </div>
+        </li>
+     
+    </ul>
+    
+    
+</div> 
+    
 
     
-      
 </body>
+
+<script>
+
+    var parentAccordion = new TINY.accordion.slider("parentAccordion");
+    parentAccordion.init("acc", "h3", 1, -1, "acc-selected");
+</script>    
+    
 </html>
     
       

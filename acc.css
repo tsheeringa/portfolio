@@ -1,0 +1,76 @@
+.acc-content p {
+    line-height:1.3;
+    font-size: 18px;
+
+}
+
+.acc-content .p_bold {
+    margin: 10px 0 13px 0;
+}
+
+/* Accordion
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.acc {
+    list-style: none;
+    color: #444;
+    margin: auto;
+    padding-left: 0px
+}
+
+.acc h3 {
+    margin: auto;
+    font-size: 1.33rem;
+    line-height: 2;
+    cursor: default;
+    font-weight: 300;
+}
+
+.acc h3:hover {
+    color: #FFE9FE;
+}
+
+.acc .acc-section {
+    overflow: hidden;
+}
+
+.acc .acc-content {
+    padding: 0px 0px 0px 0px;
+}
+
+.acc .acc-selected,
+.acc .acc-selected h3:hover {
+    font-weight: bold
+}
+
+
+
+@media (min-width: 880px) {
+    .acc .acc-content {
+        padding: 0px 0 30px 0;
+    }
+}
+
+
+
+
+
+@media (min-width: 880px) {
+    .gallery iframe,
+    .gallery video {
+        margin: 0;
+        width: 100%;
+    }
+    .acc-content {
+        display: flex;
+        flex-direction: row;
+    }
+    .acc-content .seven {
+        order: 1;
+        margin: 0 100px 0 2px;
+    }
+    .acc-content .five {
+        order: 2;
+    }
+}
+
