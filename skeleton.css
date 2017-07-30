@@ -1,0 +1,542 @@
+/*Based on skeleton*/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat-semibold-webfont.eot');
+    src: url('montserrat-semibold-webfont.eot?iefix') format('eot'), url('montserrat-semibold-webfont.woff') format('woff'), url('montserrat-semibold-webfont.ttf') format('truetype'), url('montserrat-semibold-webfont.svg#webfont') format('svg');
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat-medium-webfont.eot');
+    src: url('montserrat-medium-webfont.eot?iefix') format('eot'), url('montserrat-medium-webfont.woff') format('woff'), url('montserrat-medium-webfont.ttf') format('truetype'), url('montserrat-medium-webfont.svg#webfont') format('svg');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat-light-webfont.eot');
+    src: url('montserrat-light-webfont.eot?iefix') format('eot'), url('montserrat-light-webfont.woff') format('woff'), url('montserrat-light-webfont.ttf') format('truetype'), url('montserrat-light-webfont.svg#webfont') format('svg');
+    font-weight: 200;
+}
+
+/* Grid
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.container {
+    position: relative;
+    width: 100%;
+    /*    max-width: 920px;*/
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.column,
+.columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+
+/* For devices larger than 400px */
+
+@media (min-width: 400px) {
+    .container {
+        width: 97%;
+        padding: 0;
+    }
+}
+
+
+/* For devices larger than 550px */
+
+@media (min-width: 880px) {
+    .container {
+        width: 90%;
+    }
+    .column,
+    .columns {
+        margin-left: 4%;
+    }
+    .column:first-child,
+    .columns:first-child {
+        margin-left: 0;
+    }
+    .one.column,
+    .one.columns {
+        width: 4.66666666667%;
+    }
+    .two.columns {
+        width: 13.3333333333%;
+    }
+    .three.columns {
+        width: 22%;
+    }
+    .four.columns {
+        width: 30.6666666667%;
+    }
+    .five.columns {
+        width: 39.3333333333%;
+    }
+    .six.columns {
+        width: 48%;
+    }
+    .seven.columns {
+        width: 56.6666666667%;
+    }
+    .eight.columns {
+        width: 65.3333333333%;
+    }
+    .nine.columns {
+        width: 74.0%;
+    }
+    .ten.columns {
+        width: 82.6666666667%;
+    }
+    .eleven.columns {
+        width: 91.3333333333%;
+    }
+    .twelve.columns {
+        width: 100%;
+        margin-left: 0;
+    }
+    .one-third.column {
+        width: 30.6666666667%;
+    }
+    .two-thirds.column {
+        width: 65.3333333333%;
+    }
+    .one-half.column {
+        width: 48%;
+    }
+    /* Offsets */
+    .offset-by-one.column,
+    .offset-by-one.columns {
+        margin-left: 8.66666666667%;
+    }
+    .offset-by-two.column,
+    .offset-by-two.columns {
+        margin-left: 17.3333333333%;
+    }
+    .offset-by-three.column,
+    .offset-by-three.columns {
+        margin-left: 26%;
+    }
+    .offset-by-four.column,
+    .offset-by-four.columns {
+        margin-left: 34.6666666667%;
+    }
+    .offset-by-five.column,
+    .offset-by-five.columns {
+        margin-left: 43.3333333333%;
+    }
+    .offset-by-six.column,
+    .offset-by-six.columns {
+        margin-left: 52%;
+    }
+    .offset-by-seven.column,
+    .offset-by-seven.columns {
+        margin-left: 60.6666666667%;
+    }
+    .offset-by-eight.column,
+    .offset-by-eight.columns {
+        margin-left: 69.3333333333%;
+    }
+    .offset-by-nine.column,
+    .offset-by-nine.columns {
+        margin-left: 78.0%;
+    }
+    .offset-by-ten.column,
+    .offset-by-ten.columns {
+        margin-left: 86.6666666667%;
+    }
+    .offset-by-eleven.column,
+    .offset-by-eleven.columns {
+        margin-left: 95.3333333333%;
+    }
+    .offset-by-one-third.column,
+    .offset-by-one-third.columns {
+        margin-left: 34.6666666667%;
+    }
+    .offset-by-two-thirds.column,
+    .offset-by-two-thirds.columns {
+        margin-left: 69.3333333333%;
+    }
+    .offset-by-one-half.column,
+    .offset-by-one-half.columns {
+        margin-left: 52%;
+    }
+}
+
+
+/* Base Styles
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5em;
+    /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    color: #222;
+}
+
+
+/* Typography
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: "Montserrat";
+    color: #1A2129;
+}
+
+p {
+    font-family: "Cardo", sans-serif;
+    font-size: 1.5rem;
+}
+
+h1 {
+    color: #FF5AA2;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+.social_links {
+    margin: -5px 0 0 0;
+    line-height: 2.3rem;
+    position: relative;
+    right: 1px
+}
+
+.social_links * {
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.social_links a {
+    padding: 2px 4px;
+    margin: 0 -2px;
+}
+
+.acc-content p {
+    font-weight: 400;
+}
+
+.acc-content .p_bold {
+    font-weight: 700;
+    margin: -10px 0 13px 0;
+    font-size: 1.7rem;
+}
+
+.title {
+    margin: 7px 0 -19px 0;
+}
+
+a:hover {
+    color: #FF5AA2;
+    border-radius: 5px;
+    background-color: #B1EDE8;
+}
+
+.gallery a:hover {
+    background-color: #fff;
+}
+
+hr {
+    width: 90%: max-width: 345px;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 2.3rem;
+    margin-bottom: -1.8rem;
+    border-width: 0;
+    border-top: 2.8px solid #1A2129;
+}
+
+
+/*Larger than phone*/
+
+@media (min-width: 450px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    h2 {
+        font-size: 2.4rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    .social_links {
+        margin: -5px 0 0 0;
+        line-height: 2.3rem;
+        right: 1px;
+    }
+    .social_links * {
+        font-size: 1.6rem;
+    }
+    .social_links a {
+        padding: 2px 5px;
+        margin: 0 -4px;
+    }
+    .title {
+        margin: 15px 0 -21px 0;
+    }
+    hr {
+        width: 382px;
+        margin-top: 3.0rem;
+        margin-bottom: -1.7rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Larger than phablet */
+
+@media (min-width: 750px) {
+    h1 {
+        font-size: 3.6rem;
+    }
+    h2 {
+        font-size: 3.0rem;
+    }
+    h3 {
+        font-size: 2.4rem;
+    }
+    .title {
+        margin: 30px 0 -29px 0;
+    }
+    .social_links {
+        margin: -5px 0 0 0;
+    }
+    .social_links * {
+        font-size: 2.2rem;
+    }
+    hr {
+        width: 520px;
+        margin-top: 4.9rem;
+        margin-bottom: -2.6rem;
+    }
+    p {
+        margin: -15px 0;
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Lists
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+ul {
+    list-style: circle inside;
+}
+
+ol {
+    list-style: decimal inside;
+}
+
+ol,
+ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+}
+
+li {
+    margin-bottom: 0rem;
+}
+
+
+/* Accordion
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.acc {
+    list-style: none;
+    color: #033;
+    margin: 15px auto 100px
+}
+
+.acc h3 {
+    margin: 0;
+    font-size: 2.2rem;
+    cursor: default;
+}
+
+.acc h3:hover {
+    color: #FF5AA2;
+}
+
+.acc .acc-section {
+    overflow: hidden;
+}
+
+.acc .acc-content {
+    padding: 10px 0 30px 0;
+}
+
+.acc .acc-selected,
+.acc .acc-selected h3:hover {
+    font-weight: 400;
+}
+
+@media (min-width: 750px) {
+    .acc .acc-content {
+        padding: 15px 0 30px 0;
+    }
+}
+
+@media (min-width: 880px) {
+    .acc .acc-content {
+        padding: 40px 0 30px 0;
+    }
+}
+
+
+/* Gallery
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.gallery a {
+    /*    margin: 0 30px;*/
+}
+
+.gallery {
+    margin: 0 auto 0px;
+}
+
+.gallery img {
+    height: 80px;
+}
+
+.gallery iframe,
+.gallery video {
+    display: block;
+    max-width: 500px;
+    max-height: 300px;
+}
+
+.flattie a:first-child img {
+    height: 100px;
+}
+
+@media (min-width: 750px) {
+    .gallery {
+        margin: 0 auto 35px;
+    }
+    .gallery img {
+        height: 90px;
+    }
+}
+
+@media (min-width: 880px) {
+    .gallery iframe,
+    .gallery video {
+        margin: 0;
+        width: 100%;
+    }
+    .acc-content {
+        display: flex;
+        flex-direction: row;
+    }
+    .acc-content .seven {
+        order: 1;
+        margin: 0 70px 0 2px;
+    }
+    .acc-content .five {
+        order: 2;
+    }
+}
+
+
+/* Footer
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.footer {
+    position:relative;
+    bottom: -200px;
+}
+
+
+/* Spacing
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+button,
+.button {
+    margin-bottom: 1rem;
+}
+
+input,
+textarea,
+select,
+fieldset {
+    margin-bottom: 1.5rem;
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+    margin-bottom: 2.5rem;
+}
+
+
+/* Clearing
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+
+/* Self Clearing Goodness */
+
+.container:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
